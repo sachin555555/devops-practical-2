@@ -22,7 +22,7 @@ pipeline {
         }
   stage('Publish image to Docker Hub') {
             steps {
-        withDockerRegistry([ credentialsId: "DokerHub", url: "" ]) {
+        withDockerRegistry([ credentialsId: "DockerHub", url: "" ]) {
            sh  'docker push sachin555555/devops9class:$BUILD_NUMBER' 
 		}
                   
